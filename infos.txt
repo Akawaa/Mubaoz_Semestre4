@@ -70,3 +70,5 @@ Bérénice 11/02/2015 : Ajout onglet “Tableaux des fichiers” pour un afficha
 Thomas 12/02/2015 : Interface graphique de la partie admin sous forme d'onglet, il reste compatible avec la partie utilisateur, et l'explorateur de fichier admin
 
 Clément 16/02/2015 : Date de validité fonctionnelle !
+
+Bérénice 10/03/2015 : Passage sous GitHub !
