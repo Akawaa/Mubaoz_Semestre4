@@ -1,0 +1,72 @@
+Clément 07/10/14 : composant fonctionnel d'upload avec pseudo MVC à retoucher.
+
+Thomas 09/10/14 : Modification du chemin des includes pour fonctionner partout.
+
+Thomas 13/10/14 : Creation de la partie admin+ fonction pour savoir si on est sous Windows ou Linux dans xml.php.
+
+Aurélien 14/10/14 : Creation de la table fichier + installateur xml du module entierement fonctionnel (il installe aussi le BDD directement)
+
+Clément 14/10/14 : Création du fichier v_head.php et création formulaire côté site avec js pour l'insertion d'une date limite
+
+Clément 3/11/14 : Début d'insertion des données dans la bdd modification de m_upload.php
+
+Thomas 06/11/2014: Ajout bouton supression ancien répertoire + modification des variable d'environnement comme par exemple JPATH_ROOT par JPATH_COMPONENT_ADMINISTRATOR
+
+Clément 08/11/2014 : Insertion dans la bdd joomla fonctionnelle. Plus qu'à mettre les valeurs du formulaire; Voir code dans m_upload.php, j'ai tout commenté
+
+Loan 15/11/2014 : Création de la blacklist. Il manque le bouton pour ajouter un utilisateur dans la blacklist et le supprimer, la fonction estDansBlacklist 
+retourne vrai si un id d'utilisateur est dans la blacklist.
+
+Clément 18/11/2014 : Insertion du formulaire + cryptage du lien : OK, SAUF l'insertion d ela date de limite du fichier. A regler important -> insertion date + BUG de BDD de Loan
+
+Aurélien 19/11/2014 : Modification SQL --> ajout champ id_user table fichier afin de pouvoir les lister, correction foreign key bugé de Loan. Modification Model --> Gestion de l'id_user à l'insertion d'un fichier + date de validité fonctionelle. Modification View --> Commencement de l'interface utilisateur (non implémenté actuellement) //IMPORTANT A REFAIRE
+
+Yohan 23/11/2014 : Modification SQL --> Ajout des champs nomfichier (nom réel, exemple : toto.txt), emplacement, validitefichierstart, et validitfichierend.
+
+Clément 23/11/2014 : Modification du formulaire d'insertion de fichier avec la nouvelle bdd -> fonctionnel. Thomas je dois voir avec toi quelques détails.
+
+Thomas 24/11/2014 : Création d'une fonction permettant de crée le reperoire upload, users et shared, ainsi que le nom d'utilisateur dans users.
+
+Clément 26/11/2014 : Interface utilisateur modifiée : on arrive dans un premier temps sur une page avec deux boutons : upload et voir les uploads, quand on clic sur un bouton, ça reload la page et affiche le formulaire pour upload un fichier(bouton upload), sinon ça liste les fichiers uploadés (pas encore implémenté).
+
+Clément 27/11/2014 : Conversion des dates Américaine -> anglaise (pour la bdd) opérationelle avec une fonction créee dans m_fonction.php. A ne pas toucher.
+
+Loan/Thomas 01/12/2014 : Supression du con de loan et correction du bug de get::users dans v_index.php (dans la partie utilisateurs)
+
+Aurélien 02/12/2014 : Modification BDD, suppresion FK fichier - dossier.
+
+Loan/Thomas 02/12/2014 : Création de la blacklist
+
+Aurélien 02/12/2014 : Création du listing des dossier et des fichiers de l'utilisateur, indépendamment de la table fichier
+
+Clément 03/12/2014 : Listage des dossier, création de nouveaux dossiers dans l'arborescence -> OK. Code mis à jour.
+Clément 03/12/2014 : Insertion fichier dans un dossier de l'arborescence -> OK, le fichier porte le titre que l'utilisateur a entré lors de l'ajout de son fichier, mise à jour de la base de donnée.
+		     emplacement -> chemin qui mène au fichier
+		     lien fichier -> md5() du titre fichier.
+		     
+
+Aurélien 03/12/2014 : Modification upload, les fichiers sont uploader avec leur extension. Modification linsting fichier utilisateur, ne sont afficher que les fichiers avec id_user = id de l'utilisateur connecté. VERSION CHAUD PATTATE !
+
+Clément 06/12/2014 : Modification d'un fichier uploadé PRESQUE terminée, lors de la modification, petit bug dans le code d'aurélien je pense car si je change le nom du fichier, le fichier n'apparait plus dans l'arbre. A voir. -> réglé
+
+Clément 08/12/2014 : Modification de fichiers OPPPPPPP ! Modification dans la bdd, déplace le fichier si besoin, le renomme etc.
+
+Thomas 09/12/2014 : Changement dossier Upload par defaut (la racine du site maintenant), Création explorateur de fichier dans Admin(y'a pas les icones mais sa marche), Création d'un menu(pas encore fonctionnel)
+
+Aurélien 09/12/2014 : Ajout de la fonctionnalité de téléchargement et de la pop-up. Ne marche pas avec certaines extension de fichier (lecture impossible des images a l'arrivée par exemple), corriger demain.
+
+
+Clément 10/12/2014 : Redirection de l'url ok, basedusite/download?id=*** -> télécharge le fichier sans montrer l'url.
+
+Bérénice 11/12/2014 : Ajout du CSS.
+
+Thomas 06/01/2015 : Correction bug icone explorateur admin
+Thomas 028/01/2015 : Correction de tous les bugs de la partie admin
+Thomas 04/02/2015 : L'explorateur de fichier de la partie admin fonctionne a présetn sur Linux
+Thomas 10/02/2015 : Correction définitive de l'explorateur de fichier
+
+Bérénice 11/02/2015 : Ajout onglet “Tableaux des fichiers” pour un affichage en liste des fichiers. Boutons actions checkbox (supprimer,révoquer) non fonctionnels. Selection de tous les checkbox : ok
+
+Thomas 12/02/2015 : Interface graphique de la partie admin sous forme d'onglet, il reste compatible avec la partie utilisateur, et l'explorateur de fichier admin
+
+Clément 16/02/2015 : Date de validité fonctionnelle !
