@@ -31,6 +31,7 @@
                 <filename>mubaoz.php</filename>
                 <folder>model</folder>
                 <folder>view</folder>
+                <folder>js</folder>
         </files>
         <administration>
                 <!-- Administration Menu Section -->

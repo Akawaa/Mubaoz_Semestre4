@@ -104,7 +104,7 @@ a.menu{
   padding: 1% 2%;
   margin-top: 25px;
   margin-left: 20px;
-  font-size: 16px;
+  font-size: 11px;
   font-weight: bold;
   color: #494d59;
   text-align: center;
@@ -189,6 +189,201 @@ color:#555;
 cursor: text;
 }
 
+.register {
+  padding: 5%;
+  height: auto;
+  background: #f4f4f4;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#register-input {
+  display: block;
+  width: 100%;
+  height: 38px;
+  margin-top: 2px;
+  font-weight: 500;
+  background: rgba(252,252,252,0.5);
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+
+#register-input:focus {
+  border-color: #1e9ce6;
+  outline: 0;
+}
+
+.register-button {
+  display: block;
+  width: 100%;
+  height: 42px;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #494d59;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  background: #fcfcfc;
+  border: 1px solid;
+  border-color: #d8d8d8 #d1d1d1 #c3c3c3;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.03), 0 1px rgba(0, 0, 0, 0.04);
+}
+
+
+.register-button:hover {
+  background: #eee;
+  border-color: #c3c3c3 #d1d1d1 #d8d8d8;
+  background-image: -webkit-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: -o-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: linear-gradient(to bottom, #eeeeee, #fcfcfc);
+  -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.03);
+}
+
+
+::-moz-placeholder {
+  color: #aaa;
+  font-weight: 300;
+}
+
+::-moz-placeholder {
+  color: #aaa;
+  font-weight: 300;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  color: #aaa;
+  font-weight: 300;
+}
+
+:-ms-input-placeholder {
+  color: #aaa;
+  font-weight: 300;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.info{
+  border:solid 2px rgba(145, 200, 255, 0.4);
+  background-color: rgba(145, 200, 255, 0.2);
+
+  padding:2%;
+  border-radius: 3px;
+}
+
+
+blockquote {
+  border-left: 4px solid #A1A0A0;
+}
+
+
+a.menu{
+  display: inline;
+  width: auto;
+  height: 42px;
+  padding: 1% 2%;
+  margin-top: 25px;
+  margin-left: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #494d59;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  background: #fcfcfc;
+  border: 1px solid;
+  border-color: #d8d8d8 #d1d1d1 #c3c3c3;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.03), 0 1px rgba(0, 0, 0, 0.04);
+}
+
+a.menu:hover{
+  background: #eee;
+  border-color: #c3c3c3 #d1d1d1 #d8d8d8;
+  text-decoration: none;
+  background-image: -webkit-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: -o-linear-gradient(top, #eeeeee, #fcfcfc);
+  background-image: linear-gradient(to bottom, #eeeeee, #fcfcfc);
+  -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.03);
+}
+
+div.register-small{
+  padding: 4%;
+  width: 20%;
+  margin-left: 15%;
+  background: #f4f4f4;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  float: left;
+}
+
+
+.conteneur-onglets
+{
+  margin: 0;
+  padding:0 0 0 5px;
+}
+.onglet
+{
+  display:inline-block;
+  margin:5px 2px 0 2px;
+  padding:5px 10px ;
+  border:1px solid #AAA;
+  border-bottom:none;
+  border-radius:5px 5px 0 0;
+  -webkit-border-radius:4px 4px 0 0;
+  -moz-border-radius:4px 4px 0 0;
+  color:#555;
+  cursor: pointer;
+  font-weight:bold;
+}
+.inactif
+{
+  background:#EEE;
+}
+.inactif:hover
+{
+  background:#AAA;
+}
+.affiche-contenu-1
+{
+  background:white;
+  border-bottom:2px solid white;
+  padding-bottom:4px;
+  cursor:text;
+}
+.contenu
+{
+  background-color:white;
+  margin-top:-1px;
+  padding:5px;
+  display:none;
+  border:1px solid #AAA;
+  border-radius:4px;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  color:#555;
+  cursor: text;
+}
+
+table#fichier{
+  padding: 4px;
+  font-size: 11px;
+}
 
 
 

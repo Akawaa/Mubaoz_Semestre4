@@ -72,3 +72,5 @@ Thomas 12/02/2015 : Interface graphique de la partie admin sous forme d'onglet, 
 Clément 16/02/2015 : Date de validité fonctionnelle !
 
 Bérénice 10/03/2015 : Passage sous GitHub !
+
+Bérénice 11/03/2015 : Fonction révoquée fonctionnelle (avec de l'Ajax S'il-vous-plait ! )
