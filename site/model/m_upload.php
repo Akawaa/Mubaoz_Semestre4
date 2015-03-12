@@ -9,7 +9,6 @@
                 $mypath=$path->currentpath; 
             }
             $content_dir = JPATH_ROOT.$pathos.$mypath.$pathos;
-            echo $content_dir;
             $tmp_file = $_FILES['fichier']['tmp_name'];
 
             if( !is_uploaded_file($tmp_file) )
@@ -36,7 +35,7 @@
                 exit("Impossible de copier le fichier dans $content_dir");
             }
 
-            echo " Le fichier a bien été uploadé ".$_FILES['fichier']['type'];
+            echo "<script>alert('Le fichier à bien été uploadé');</script>";
         }
 
 

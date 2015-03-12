@@ -10,7 +10,7 @@ function lister($tableau) {
 
         echo  "<tr><td><input type='checkbox' name='Choix[]'></td><td>".$tableau[$i]['nonfichier']."</td><td>".$tableau[$i]['titrefichier'].'</td><td>'.date("d-m-Y",strtotime($tableau[$i]['validitefichierstart'])).'</td><td>'.date("d-m-Y",strtotime($tableau[$i]['validitefichierend'])).'</td><td style="text-align: center;font-size:20px;"><a href="'.JURI::base().'index.php/component/mubaoz?modiffichier='.$tableau[$i]['titrefichier'].'">✎</a></td>';
         ?>
-        <td style="text-align: center; font-size: 20px;"><a href="<?php JURI::base()?>index.php/component/mubaoz?show_file=show_file&chemin='<?php echo $tableau[$i]['emplacement']; ?>'&fichier='<?php echo $tableau[$i]['titrefichier'];?>'" onclick="return confirm('Voulez-vous vraiment suprimer ce fichier?');">✘</a></td>
+        <td style="text-align: center; font-size: 20px;"><a href="<?php JURI::base()?>index.php/component/mubaoz?show_file=show_tab_file&chemin='<?php echo $tableau[$i]['emplacement']; ?>'&fichier='<?php echo $tableau[$i]['titrefichier'];?>'" onclick="return confirm('Voulez-vous vraiment suprimer ce fichier?');">✘</a></td>
         <td style="text-align: center; font-size: 20px;"><a href="#" onclick="revoquerFichier('<?php echo $tableau[$i]['nonfichier'];?>');return false;">↫</a></td>
     <?php
     }
@@ -60,7 +60,7 @@ $results = $db->loadAssocList();
         }
     </script>
 
-    <table class="fichier table">
+    <table id="fichier" class="table">
         <form method="post" action="#">
             <input type="submit" class="register-button-small" name="supprimer" value="Supprimer">
             <input type="submit"  class="register-button-small" name="revoquer"  value="Révoquer">

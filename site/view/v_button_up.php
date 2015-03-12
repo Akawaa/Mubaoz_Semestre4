@@ -75,23 +75,24 @@
     </select>
 
  	  <label for="username">Nom du fichier :</label>   
-    <input id="register-input" type="text"  name="file_name">
+    <input id="register-input" type="text"  name="file_name" onchange="verifFichier();">
     
     <center>    
     <label for="date">Date du début de validité du fichier :</label>
-    <input id="datepicker"  type="text" name="date_debut_validite">
+    <input id="datepicker"  type="text" name="date_debut_validite" onchange="verifFichier();">
 
 
     <label for="date">Date de fin de validité du fichier :</label>
     
-    <input id="datepicker2" type="text" name="date_fin_validite">
+    <input id="datepicker2" type="text" name="date_fin_validite" onchange="verifFichier();">
 
 
   <p>
    
-    <input  type="file" name="fichier" size="30">
-    <input class="register-button" type="submit" name="upload" value="Uploader">
-  
+    <input id="file" type="file" name="fichier" size="30" onchange="verifFichier();">
+    <input disabled="true" id="bouton" class="register-button" type="submit" name="upload" value="Uploader">
+
+
   </p>
 </center>
 </form>
