@@ -18,21 +18,21 @@ function newXMLHttpRequest() {
     return xhr;
 }
 
-/* Revoque */
-function revoquerFichier(titre){
+/* Supprimer */
+function supprimerFichier(nom,titre){
     var xhr = newXMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
             window.location.reload();
         }
     };
-    xhr.open("POST", chemin_revoquer, true);
+    xhr.open("POST", chemin_supprimer, true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.send("titre="+titre);
+    xhr.send("nom="+nom+"&titre="+titre);
 }
 
-function revoqFichier(titre){
-    if(confirm('Voulez-vous vraiment révoquer ce fichier à la date d\'hier ?')){
-        revoqFichier(titre);
+function suppFichier(nom,titre){
+    if(confirm('Voulez-vous vraiment supprimer ce fichier ?')){
+        supprimerFichier(nom,titre);
     }
 }

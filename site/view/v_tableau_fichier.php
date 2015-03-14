@@ -1,5 +1,6 @@
 <script>
     var chemin_revoquer = "<?php echo JUri::base().'components/com_mubaoz/view/revoquer.php' ?>"
+    var chemin_supprimer = "<?php echo JUri::base().'components/com_mubaoz/view/supprimer.php' ?>"
 </script>
 
 <?php
@@ -8,9 +9,9 @@ function lister($tableau) {
 
     for($i=0;$i<count($tableau);$i++) {
 
-        echo  "<tr><td><input type='checkbox' name='Choix[]'></td><td>".$tableau[$i]['nonfichier']."</td><td>".$tableau[$i]['titrefichier'].'</td><td>'.date("d-m-Y",strtotime($tableau[$i]['validitefichierstart'])).'</td><td>'.date("d-m-Y",strtotime($tableau[$i]['validitefichierend'])).'</td><td style="text-align: center;font-size:20px;"><a href="'.JURI::base().'index.php/component/mubaoz?modiffichier='.$tableau[$i]['titrefichier'].'">✎</a></td>';
+        echo  "<tr><td><input type='checkbox' class='check' id='".$tableau[$i]['nonfichier']."|".$tableau[$i]['titrefichier']."' name='Choix[]'></td><td>".$tableau[$i]['nonfichier']."</td><td>".$tableau[$i]['titrefichier'].'</td><td>'.date("d-m-Y",strtotime($tableau[$i]['validitefichierstart'])).'</td><td>'.date("d-m-Y",strtotime($tableau[$i]['validitefichierend'])).'</td><td style="text-align: center;font-size:20px;"><a href="'.JURI::base().'index.php/component/mubaoz?modiffichier='.$tableau[$i]['titrefichier'].'">✎</a></td>';
         ?>
-        <td style="text-align: center; font-size: 20px;"><a href="<?php JURI::base()?>index.php/component/mubaoz?show_file=show_tab_file&chemin='<?php echo $tableau[$i]['emplacement']; ?>'&fichier='<?php echo $tableau[$i]['titrefichier'];?>'" onclick="return confirm('Voulez-vous vraiment suprimer ce fichier?');">✘</a></td>
+        <td style="text-align: center; font-size: 20px;"><a href="#" onclick="suppFichier('<?php echo $tableau[$i]['nonfichier'];?>','<?php echo $tableau[$i]['titrefichier'];?>');return false;">✘</a></td>
         <td style="text-align: center; font-size: 20px;"><a href="#" onclick="revoquerFichier('<?php echo $tableau[$i]['nonfichier'];?>');return false;">↫</a></td>
     <?php
     }
@@ -39,6 +40,7 @@ $db->setQuery($query);
 // Load the results as a list of stdClass objects (see later for more options on retrieving data).
 $results = $db->loadAssocList();
 ?>
+
 <div class="register">
     <h2>Listes des dossiers et de vos fichiers</h2>
 
@@ -62,8 +64,8 @@ $results = $db->loadAssocList();
 
     <table id="fichier" class="table">
         <form method="post" action="#">
-            <input type="submit" class="register-button-small" name="supprimer" value="Supprimer">
-            <input type="submit"  class="register-button-small" name="revoquer"  value="Révoquer">
+            <button onclick="supprimerFichierCheck();return false;" class="register-button-small" name="supprimer">Supprimer</button>
+            <button onclick="revoquerFichierCheck();return false;" class="register-button-small" name="revoquer">Révoquer</button>
 
             <tr>
                 <th><input type="checkbox" onClick="CocheTout(this,'Choix[]')"></th>
