@@ -47,6 +47,7 @@
                         <filename>mubaoz.php</filename>
                         <filename>mubaoz.xml</filename>
                         <filename>style.css</filename>
+                        <filename>code.js</filename>
                         <folder>controller</folder>
                         <folder>sql</folder>
                         <folder>model</folder>
