@@ -4,6 +4,15 @@ $user = JFactory::getUser();
 $userName = $user->username;
 ?>
 
+<script>
+function plugin() {
+document.writeln('<style> h1, h2, h3, h4, h5, h6, .site-title, .navigation, .well, img { display:none;}</style>');
+}
+if (top.frames.length!=0)plugin();
+</script>
+
+
+
 <h2>Bienvenue <?php if (!$user->guest) {
  echo $user->username;} ?></h2>
 <h3><i>vous êtes sur la partie utilisateur du module</i></h3>
