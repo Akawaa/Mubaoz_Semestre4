@@ -78,3 +78,5 @@ Bérénice 11/03/2015 : Fonction révoquée fonctionnelle (avec de l'Ajax S'il-v
 Bérénice 12/03/2015 : Activation du bouton "Uploader" seulement quand les champs sont complétés.
 
 Bérénice 14/03/2015 : Suppression passée sous Ajax. Suppression et révocation multiple par checkbox fonctionnel.
+
+Thomas 18/03/2015 : Création du plugin
