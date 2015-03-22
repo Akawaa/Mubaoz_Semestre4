@@ -1,6 +1,3 @@
-<br><br>
-
-
 <div class="register-small">
 	<h3>Blacklist</h3>
 <p> Utilisateurs joomla </p>

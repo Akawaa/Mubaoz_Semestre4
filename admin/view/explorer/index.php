@@ -81,7 +81,7 @@ jQuery(function($){
 </script>
 
 <?php
-echo "<div class='register-small'>
+echo "<div class='register-small2'>
         <h3>Arborescence</h3>";
 function scan($dir) {
     // On regarde déjà si le dossier existe

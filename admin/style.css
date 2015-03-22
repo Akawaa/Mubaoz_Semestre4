@@ -140,6 +140,19 @@ div.register-small{
   float: left;
 }
 
+div.register-small2{
+  padding:15px;
+  width: 93%;
+  height: 92%;
+  margin-left: 0%;
+  background: #f4f4f4;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  float: left;
+
+}
+
 
 .conteneur-onglets 
 {
@@ -321,9 +334,9 @@ a.menu:hover{
 }
 
 div.register-small{
-  padding: 4%;
-  width: 20%;
-  margin-left: 15%;
+  width: 92%;
+  height: 93%;
+  margin-left: 0%;
   background: #f4f4f4;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -369,15 +382,28 @@ div.register-small{
 .contenu
 {
   background-color:white;
-  margin-top:-1px;
+  margin-top: -1px;
   padding:5px;
   display:none;
-  border:1px solid #AAA;
   border-radius:4px;
   -webkit-border-radius:4px;
   -moz-border-radius:4px;
   color:#555;
   cursor: text;
+}
+
+#contenu_1{
+  width: 723px;
+}
+
+#contenu_2{
+  height: 450px;
+  width: 400px;
+}
+
+#contenu_3{
+  width: 400px;
+  height: 350px;
 }
 
 table#fichier{

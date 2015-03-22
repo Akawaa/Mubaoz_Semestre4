@@ -23,10 +23,6 @@ if(isset($_GET['chemin'])&&isset($_GET['fichier'])){
 		$user_id = $user->get('id');
 		
 		$query = $db->getQuery(true);
-		
-		
-		
-		
 		$conditions = array(
 			$db->quoteName('id_user') . ' = '.$user->id,
     			$db->quoteName('emplacement') . ' = '.$_GET['chemin'].'',
@@ -108,7 +104,7 @@ if(isset($_GET['chemin'])&&isset($_GET['fichier'])){
 	$results = $db->loadAssocList();
 ?>
 <div class="register">
-<h2>Listes des dossiers et de vos fichiers</h2>
+<h2>Arborescence de vos fichiers</h2>
 
 <div class="listing">
   <?php

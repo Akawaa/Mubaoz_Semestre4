@@ -1,6 +1,5 @@
 <?php
 include JPATH_COMPONENT_ADMINISTRATOR."/view/head.php";
-include JPATH_COMPONENT_ADMINISTRATOR."/view/menu.php";
 include JPATH_COMPONENT_ADMINISTRATOR."/controller/xml.php";
 include JPATH_COMPONENT_ADMINISTRATOR."/controller/controlfolder.php";
 
