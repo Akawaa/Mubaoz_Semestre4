@@ -15,7 +15,7 @@ if (top.frames.length!=0)plugin();
 
 <h2>Bienvenue <?php if (!$user->guest) {
  echo $user->username;} ?></h2>
-<h3><i>vous êtes sur la partie utilisateur du module</i></h3>
+
 <?php
 if (!$user->guest) {
 $tab3= array();
@@ -27,8 +27,8 @@ foreach ($sxeblacklist->users->name as $param => $value) {
 if(!in_array($user->username, $tab3)):?>
     <a class="menu" href="<?php JURI::base()?>index.php?option=com_mubaoz?upload=upload" >Ajouter un fichier</a>
 	<a class="menu" href="<?php JURI::base()?>index.php?option=com_mubaoz?newRepertory=newRepertory" >Creer un nouveau sous dossier</a>
-	<a class="menu" href="<?php JURI::base()?>index.php?option=com_mubaoz?show_file=show_file">Mes fichiers uploadé</a>
-	<a class="menu" href="<?php JURI::base()?>index.php?option=com_mubaoz?show_tab_file=show_tab_file">Tableaux des fichiers</a><br><br>
+	<a class="menu" href="<?php JURI::base()?>index.php?option=com_mubaoz?show_tab_file=show_tab_file">Fichiers uploadés</a>
+	<a class="menu" href="<?php JURI::base()?>index.php?option=com_mubaoz?show_file=show_file">Arborescence des fichiers</a><br><br>
 <br><br>
 <?php 
 endif;

@@ -52,18 +52,18 @@
 <form method="post" enctype="multipart/form-data" action="">
 	
 
-    <p class="info">Votre fichier sera enregistré dans la base de donnée, le nom du propriétaire est le suivant : 
+    <!--<p class="info">Votre fichier sera enregistré dans la base de donnée, le nom du propriétaire est le suivant :
         
-        <?php
+        <?php /*
                 $user = JFactory::getUser();
                 $userName = $user->username;
-                echo $userName;
+                echo $userName;*/
         ?>
 
-    </p>
+    </p>-->
     <input type="hidden" >
 
-    <p>Emplacement de votre fichier : </p>
+    <p>Emplacement du fichier : </p>
     <?php $level = 3; ?>
     <select id="register-input" name="destination">
         <?php $chemin = JPATH_ROOT."/upload/shared"; ?>
@@ -78,11 +78,11 @@
     <input id="register-input" type="text"  name="file_name" onchange="verifFichier();">
     
     <center>    
-    <label for="date">Date du début de validité du fichier :</label>
+    <label for="date">Date du début de validité :</label>
     <input id="datepicker"  type="text" name="date_debut_validite" onchange="verifFichier();">
 
 
-    <label for="date">Date de fin de validité du fichier :</label>
+    <label for="date">Date de fin de validité :</label>
     
     <input id="datepicker2" type="text" name="date_fin_validite" onchange="verifFichier();">
 

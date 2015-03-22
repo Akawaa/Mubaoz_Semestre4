@@ -385,6 +385,10 @@ table#fichier{
   font-size: 11px;
 }
 
+table#fichier th,td{
+  padding: 0px;
+}
+
 
 
 
