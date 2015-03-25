@@ -115,10 +115,16 @@ function scan($dir) {
         foreach($files as $f) {
             // S'il y a un fichier
             if(is_file($dir.$f)) {
-                echo '<li class="file" rel="'.$dir.$f.'">'.$f."test".'</li>';
+                echo '<li class="file" rel="'.$dir.$f.'">'.$f.'<form style="display:inline;margin:0" action="" method="post">
+		    <button type="submit" id="unlinkfile" name="unlinkfile" value="'.$dir.$f.'">Supprimer</button>
+		<form></li>';
             }
         }
     }
+}
+
+if(!empty($_POST['unlinkfile'])) {
+	@unlink($_POST['unlinkfile']);
 }
 
 foreach($xml as $path){
